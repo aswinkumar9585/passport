@@ -15,7 +15,7 @@ pipeline{
      stage("Build & SonarQube analysis") {
             agent any
             steps {
-              withSonarQubeEnv('sonarPassport') {
+              withSonarQubeEnv('sonarpassport') {
                 sh 'java -version'
                 sh 'mvn clean package sonar:sonar'
               }
